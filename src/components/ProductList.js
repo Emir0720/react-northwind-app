@@ -1,10 +1,13 @@
-import React from "react";
+import React, {Component} from "react";
 import "./../styles/ProductList.css";
 
-function ProductList() {
-  return (
+export default class ProductList extends Component {
+  render() {
+    return(
+
+ 
     <div className="product-list">
-      <h2>Ürünler</h2>
+      <h2>{this.props.info.title}</h2>
       <div className="products">
         <div className="product-card">Ürün 1</div>
         <div className="product-card">Ürün 2</div>
@@ -12,7 +15,6 @@ function ProductList() {
         <div className="product-card">Ürün 4</div>
       </div>
     </div>
-  );
+       )
+  }
 }
-
-export default ProductList;
