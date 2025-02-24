@@ -1,9 +1,37 @@
+/* ✅ Navi (Navigasyon) Konteyneri */
 .navi {
-    background-color: #4e96e4;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+  background-color: #007bff; /* Daha modern bir mavi ton */
+  color: white;
+  padding: 20px 40px; /* Daha geniş alan */
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  border-bottom: 3px solid #0056b3; /* Altında ince bir çizgi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
+  transition: all 0.3s ease;
+}
+
+/* ✅ Navi Üzerinde Hover Efekti */
+.navi:hover {
+  background-color: #0056b3; /* Mavi tonunda hafif koyulaşma */
+  transform: translateY(-3px); /* Hafif yukarı kayma */
+}
+
+/* ✅ Navi Başlık (My Store) */
+.navi h1 {
+  margin: 0;
+  font-size: 32px;
+  font-family: 'Arial', sans-serif; /* Modern font */
+  text-transform: uppercase; /* Başlık büyük harfli */
+}
+
+/* ✅ Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .navi {
+      padding: 15px 20px; /* Küçük ekranlarda daha az padding */
   }
-  
+
+  .navi h1 {
+      font-size: 24px; /* Başlık boyutu küçültülür */
+  }
+}

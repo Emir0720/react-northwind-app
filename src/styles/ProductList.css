@@ -1,10 +1,15 @@
+/* ✅ Ürün Listesi Konteyneri */
 .product-list {
   width: 90%;
-  background-color: #d3d3d6;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
   overflow-x: auto;
+  transition: all 0.3s ease-in-out;
 }
 
+/* ✅ Başlık Stili */
 .product-list h2 {
   text-align: center;
   font-size: 24px;
@@ -13,39 +18,81 @@
   margin-bottom: 20px;
 }
 
+/* ✅ Ürün Tablosu */
 .product-table {
   width: 100%;
   border-collapse: collapse;
   background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
+/* ✅ Tablo Başlık */
 .product-table thead {
-  background-color: #007bff;
+  background: linear-gradient(to right, #007bff, #0056b3);
   color: white;
 }
 
+/* ✅ Başlık ve Hücre Stili */
 .product-table th, .product-table td {
-  padding: 12px;
+  padding: 14px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
+/* ✅ Başlık Hücreleri */
 .product-table th {
   font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ✅ Tablo İçeriği Hover Efekti */
+.product-table tbody tr {
+  transition: all 0.3s ease;
 }
 
 .product-table tbody tr:hover {
-  background-color: #f1f1f1;
-  transition: background-color 0.3s ease;
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.02);
 }
 
+/* ✅ Buton Stili */
+.product-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.product-btn.edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.product-btn.edit:hover {
+  background-color: #218838;
+}
+
+.product-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.product-btn.delete:hover {
+  background-color: #c82333;
+}
+
+/* ✅ Mobil Uyumlu Tasarım */
 @media (max-width: 768px) {
   .product-list {
       width: 100%;
-      padding: 10px;
+      padding: 15px;
   }
 
   .product-table th, .product-table td {
       padding: 10px;
+      font-size: 14px;
   }
 }
