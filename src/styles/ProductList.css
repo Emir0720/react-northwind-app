@@ -1,23 +1,51 @@
 .product-list {
-    width: 75%; /* 9 birime karşılık gelen genişlik */
-    padding: 20px;
+  width: 90%;
+  background-color: #d3d3d6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.product-list h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9f9f9;
+}
+
+.product-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.product-table th, .product-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+  font-weight: bold;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+      width: 100%;
+      padding: 10px;
   }
-  
-  .products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+  .product-table th, .product-table td {
+      padding: 10px;
   }
-  
-  .product-card {
-    background-color: #f4e9e9;
-    padding: 15px;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .product-list h2 {
-  text-align: center; /* Başlığı yatayda ortalamak için */
-  width: 100%; /* Genişliği yüzde yüz yaparak ortalamayı sağlar */
 }

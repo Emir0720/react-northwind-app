@@ -1,20 +1,36 @@
-import React, {Component} from "react";
+import React from "react";
 import "./../styles/ProductList.css";
 
-export default class ProductList extends Component {
-  render() {
-    return(
-
- 
+const ProductList = ({ products, info, currentCategory }) => {
+  return (
     <div className="product-list">
-      <h2>{this.props.info.title}-{this.props.currentCategory}</h2>
-      <div className="products">
-        <div className="product-card">product 1</div>
-        <div className="product-card">product 2</div>
-        <div className="product-card">product 3</div>
-        <div className="product-card">product 4</div>
-      </div>
+      <h2>{info.title} - {currentCategory}</h2>
+
+      <table className="product-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Quantity Per Unit</th>
+            <th>Units In Stock</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          {products.map(product => (
+            <tr key={product.id}>
+              <td>{product.id}</td>
+              <td>{product.productName}</td>
+              <td>${product.unitPrice}</td>
+              <td>{product.quantityPerUnit}</td>
+              <td>{product.unitsInStock}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-       )
-  }
-}
+  );
+};
+
+export default ProductList;

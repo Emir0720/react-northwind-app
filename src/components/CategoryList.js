@@ -15,6 +15,17 @@ export default class CategoryList extends Component {
     };
   }
 
+  componentDidMount() {
+    this.getCategories();
+  }
+
+   getCategories = () => {
+    fetch("http://localhost:3000/categories")
+      .then(response => response.json())
+      .then(data => this.setState({ categories: data }));
+
+   };
+
   render() {
     return (
       <div className="category-list">
@@ -22,7 +33,7 @@ export default class CategoryList extends Component {
         <ul>
           {this.state.categories.map(category => (
             <li onClick={() => this.props.changeCategory(category)} 
-                key={category.categoryId}>
+                key={category.id}>
               {category.categoryName}
             </li>
           ))}
