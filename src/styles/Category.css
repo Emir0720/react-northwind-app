@@ -1,0 +1,28 @@
+.category-list {
+    width: 25%; /* 3 birime karşılık gelen genişlik */
+    background-color: #f8f9fa;
+    padding: 20px;
+    height: 100vh; /* Sayfanın tam boyu */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-list h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .category-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .category-list li:hover {
+    background-color: #ddd;
+  }
+  

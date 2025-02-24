@@ -1,0 +1,19 @@
+.product-list {
+    width: 75%; /* 9 birime karşılık gelen genişlik */
+    padding: 20px;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
