@@ -17,3 +17,7 @@
     text-align: center;
   }
   
+  .product-list h2 {
+    text-align: center; /* Başlığı yatayda ortalamak için */
+    width: 100%; /* Genişliği yüzde yüz yaparak ortalamayı sağlar */
+  }

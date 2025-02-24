@@ -7,7 +7,9 @@
   }
   
   .category-list h2 {
-    font-size: 18px;
+    text-align: center; /* Başlığı yatayda ortalamak için */
+   width: 100%; /* Genişliği yüzde yüz yaparak ortalamayı sağlar */
+    
     margin-bottom: 10px;
   }
   
