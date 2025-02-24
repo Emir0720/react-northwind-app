@@ -7,19 +7,13 @@ export default class CategoryList extends Component {
     super(props);
     this.state = {
       categories: [
-        { categoryId: 1, categoryName: "Elektronik" },
-        { categoryId: 2, categoryName: "Giyim" },
-        { categoryId: 3, categoryName: "Ev & Bahçe" },
-        { categoryId: 4, categoryName: "Kitap" }
+        { categoryId: 1, categoryName: "Electronic" },
+        { categoryId: 2, categoryName: "Clothes" },
+        { categoryId: 3, categoryName: "Home & Garden" },
+        { categoryId: 4, categoryName: "Books" }
       ],
-      currentCategory: null
     };
   }
-
-  // Arrow function kullanarak 'this' bağlamını otomatik olarak ayarlıyoruz
-  changeCategory = (category) => {
-    this.setState({ currentCategory: category.categoryName });
-  };
 
   render() {
     return (
@@ -27,13 +21,13 @@ export default class CategoryList extends Component {
         <h2>{this.props.info.title}</h2>
         <ul>
           {this.state.categories.map(category => (
-            <li onClick={() => this.changeCategory(category)} 
+            <li onClick={() => this.props.changeCategory(category)} 
                 key={category.categoryId}>
               {category.categoryName}
             </li>
           ))}
         </ul>
-        <h4>{this.state.currentCategory}</h4>
+        <h4>{this.props.currentCategory}</h4>
       </div>
     );
   }

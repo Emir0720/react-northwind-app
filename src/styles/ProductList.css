@@ -10,7 +10,7 @@
   }
   
   .product-card {
-    background-color: #fff;
+    background-color: #f4e9e9;
     padding: 15px;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -18,6 +18,6 @@
   }
   
   .product-list h2 {
-    text-align: center; /* Başlığı yatayda ortalamak için */
-    width: 100%; /* Genişliği yüzde yüz yaparak ortalamayı sağlar */
-  }
+  text-align: center; /* Başlığı yatayda ortalamak için */
+  width: 100%; /* Genişliği yüzde yüz yaparak ortalamayı sağlar */
+}
