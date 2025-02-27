@@ -1,37 +1,56 @@
-/* ✅ Navi (Navigasyon) Konteyneri */
 .navi {
-  background-color: #007bff; /* Daha modern bir mavi ton */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff; 
   color: white;
-  padding: 20px 40px; /* Daha geniş alan */
-  text-align: center;
+  padding: 20px 40px; 
   font-size: 28px;
   font-weight: bold;
-  border-bottom: 3px solid #0056b3; /* Altında ince bir çizgi */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
+  border-bottom: 3px solid #0056b3; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   transition: all 0.3s ease;
 }
 
-/* ✅ Navi Üzerinde Hover Efekti */
 .navi:hover {
-  background-color: #0056b3; /* Mavi tonunda hafif koyulaşma */
-  transform: translateY(-3px); /* Hafif yukarı kayma */
+  background-color: #0056b3; 
+  transform: translateY(-3px); 
 }
 
-/* ✅ Navi Başlık (My Store) */
 .navi h1 {
   margin: 0;
   font-size: 32px;
-  font-family: 'Arial', sans-serif; /* Modern font */
-  text-transform: uppercase; /* Başlık büyük harfli */
+  font-family: 'Arial', sans-serif; 
+  text-transform: uppercase; 
 }
 
-/* ✅ Mobil Uyumluluk */
+.cart {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+
 @media (max-width: 768px) {
   .navi {
-      padding: 15px 20px; /* Küçük ekranlarda daha az padding */
+    padding: 15px 20px; 
+    font-size: 24px;
   }
 
   .navi h1 {
-      font-size: 24px; /* Başlık boyutu küçültülür */
+    font-size: 24px; 
+  }
+
+  .cart {
+    font-size: 18px;
+    padding: 8px 12px;
   }
 }

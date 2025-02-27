@@ -1,10 +1,12 @@
 import React from "react";
 import "./../styles/ProductList.css";
 
-const ProductList = ({ products, info, currentCategory }) => {
+const ProductList = ({ products, info, currentCategory, addToCart }) => {
   return (
     <div className="product-list">
-      <h2>{info.title} - {currentCategory}</h2>
+      <h2>
+        {info.title} - {currentCategory}
+      </h2>
 
       <table className="product-table">
         <thead>
@@ -14,17 +16,21 @@ const ProductList = ({ products, info, currentCategory }) => {
             <th>Unit Price</th>
             <th>Quantity Per Unit</th>
             <th>Units In Stock</th>
+            <th>Action</th>
           </tr>
         </thead>
-      
+
         <tbody>
-          {products.map(product => (
+          {products.map((product) => (
             <tr key={product.id}>
               <td>{product.id}</td>
               <td>{product.productName}</td>
               <td>${product.unitPrice}</td>
               <td>{product.quantityPerUnit}</td>
               <td>{product.unitsInStock}</td>
+              <td>
+                <button onClick={() => addToCart(product)}>Add to Cart 🛒</button>
+              </td>
             </tr>
           ))}
         </tbody>
