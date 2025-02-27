@@ -25,24 +25,26 @@
 
 .cart-summary-list li {
   padding: 10px;
-  border-bottom: 1px solid #191919; /* Her ürün arasına çizgi ekler */
+  border-bottom: 1px solid #000000; /* Her ürün arasına çizgi ekler */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #2f2fd4;
   font-size: 18px;
+
+  
 }
 
 .cart-summary-list li:last-child {
-  border-bottom: none; /* Son ürün için çizgi eklenmez */
+  border-bottom: none; 
 }
 
 .cart-summary-list li:hover {
-  background-color: #858282;
+  background-color: #4997e5;
 }
 
 .quantity-badge {
-  background-color: #ffcc00;
+  background-color: #08e06a;
   color: #000;
   border-radius: 50%;
   padding: 5px 10px;
@@ -50,4 +52,20 @@
   margin-left: 10px;
   font-weight: bold;
 }
+
+.remove-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 5px;
+}
+
+.remove-button:hover {
+  background-color: #e60000;
+}
+
 

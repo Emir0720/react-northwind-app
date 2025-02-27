@@ -45,13 +45,34 @@ export default class App extends Component {
    
   };
 
+  removeFromCart = (product) => {
+    let newCart = [...this.state.cart];  
+  
+    // Sepetteki ürünün miktarını 1 azaltıyoruz
+    let itemIndex = newCart.findIndex((c) => c.product.id === product.id);
+  
+    if (itemIndex !== -1) {
+      if (newCart[itemIndex].quantity > 1) {
+        
+        newCart[itemIndex].quantity -= 1;
+      } else {
+        
+        newCart = newCart.filter((c) => c.product.id !== product.id);
+      }
+    }
+  
+    this.setState({ cart: newCart });  // Sepeti güncelliyoruz
+  }
+  
+
+
   render() {
     let productInfo = { title: "Product List" };
     let categoryInfo = { title: "Category List" };
 
     return (
       <div>
-        <Navi cart={this.state.cart} />
+        <Navi removeFromCart = {this.removeFromCart} cart={this.state.cart} />
         <div className="main-container">
           <CategoryList
             currentCategory={this.state.currentCategory}

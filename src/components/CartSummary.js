@@ -1,7 +1,7 @@
 import React from 'react';
 import './../styles/CartSummary.css';
 
-const CartSummary = ({ cart }) => {
+const CartSummary = ({ cart, removeFromCart }) => {
   return (
     <div className={`cart-summary ${cart.length > 0 ? 'open' : ''}`}>
       🛒 Cart ({cart.reduce((total, item) => total + item.quantity, 0)} items) <br /> <br />
@@ -11,6 +11,12 @@ const CartSummary = ({ cart }) => {
             <li key={index}>
               {item.product.productName}  
               <span className="quantity-badge">{item.quantity}</span>
+              {/* Add Remove button */}
+              <button 
+                className="remove-button" 
+                onClick={() => removeFromCart(item.product)}>
+                X
+              </button>
             </li>
           ))}
         </ul>
