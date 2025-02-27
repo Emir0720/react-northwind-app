@@ -3,6 +3,7 @@ import Navi from "./components/Navi";
 import CategoryList from "./components/CategoryList";
 import ProductList from "./components/ProductList";
 import "./App.css";
+import alertify from "alertifyjs";
 
 export default class App extends Component {
   state = { currentCategory: "", products: [], cart: [] };
@@ -42,7 +43,9 @@ export default class App extends Component {
     }
 
     this.setState({ cart: newCart });
-   
+
+    alertify.success(product.productName + " added to cart!", 2); 
+    
   };
 
   removeFromCart = (product) => {
