@@ -15,7 +15,7 @@ export default class CategoryList extends Component {
   }
 
   getCategories = () => {
-    fetch("http://localhost:3000/categories")
+    fetch("http://localhost:3001/categories")
       .then(response => response.json())
       .then(data => this.setState({ categories: data }));
   };

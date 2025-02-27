@@ -6,7 +6,7 @@
 }
 
 .category-header {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -31,11 +31,11 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 1.5s ease, opacity 1.5s ease; /* Geçiş süresi eklendi */
+  transition: max-height 1.5s ease, opacity 1.5s ease; 
 }
 
 .category-items.open {
-  max-height: 500px; /* Yeterli bir yükseklik verildi */
+  max-height: 500px; 
   opacity: 1;
 }
 

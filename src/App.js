@@ -19,7 +19,7 @@ export default class App extends Component {
   };
 
   getProducts = (categoryId) => {
-    let url = "http://localhost:3000/products"
+    let url = "http://localhost:3001/products"
 
     if (categoryId) {
       url += `?categoryId=${categoryId}`;
