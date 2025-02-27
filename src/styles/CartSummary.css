@@ -1,0 +1,53 @@
+.cart-summary {
+  position: absolute;
+  top: 80px; /* Sepet menüsünü navbar'ın altına yerleştirir */
+  right: 20px; /* Sağ tarafa yerleştirir */
+  background-color: #007BFF;
+  padding: 10px;
+  border: 1px solid #4f4e4e;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Sepet listesi arka planın üzerinde görünür */
+  display: none; /* Başlangıçta gizli */
+  max-height: 250px;
+  overflow-y: auto; /* Ürünlerin taşması durumunda kaydırma çubuğu ekler */
+}
+
+.cart-summary.open {
+  display: block; /* open sınıfı eklenince görünür olur */
+}
+
+.cart-summary-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-summary-list li {
+  padding: 10px;
+  border-bottom: 1px solid #191919; /* Her ürün arasına çizgi ekler */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f2fd4;
+  font-size: 18px;
+}
+
+.cart-summary-list li:last-child {
+  border-bottom: none; /* Son ürün için çizgi eklenmez */
+}
+
+.cart-summary-list li:hover {
+  background-color: #858282;
+}
+
+.quantity-badge {
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+

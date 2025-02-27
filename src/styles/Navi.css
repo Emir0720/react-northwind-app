@@ -37,20 +37,3 @@
   background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.1);
 }
-
-
-@media (max-width: 768px) {
-  .navi {
-    padding: 15px 20px; 
-    font-size: 24px;
-  }
-
-  .navi h1 {
-    font-size: 24px; 
-  }
-
-  .cart {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-}

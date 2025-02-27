@@ -42,7 +42,7 @@ export default class App extends Component {
     }
 
     this.setState({ cart: newCart });
-    alert(`${product.productName} added to cart!`);
+   
   };
 
   render() {
