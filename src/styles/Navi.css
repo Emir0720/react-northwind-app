@@ -12,10 +12,7 @@
   transition: all 0.3s ease;
 }
 
-.navi:hover {
-  background-color: #0056b3; 
-  transform: translateY(-3px); 
-}
+
 
 .navi h1 {
   margin: 0;
