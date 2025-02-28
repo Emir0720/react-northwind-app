@@ -18,7 +18,7 @@
   margin-top: 0px;
 }
 
-/* ✅ Ürün Tablosu */
+
 .product-table {
   width: 100%;
   border-collapse: collapse;
@@ -27,26 +27,26 @@
   overflow: hidden;
 }
 
-/* ✅ Tablo Başlık */
+
 .product-table thead {
   background: linear-gradient(to right, #007bff, #0056b3);
   color: white;
 }
 
-/* ✅ Başlık ve Hücre Stili */
+
 .product-table th, .product-table td {
   padding: 14px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-/* ✅ Başlık Hücreleri */
+
 .product-table th {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* ✅ Tablo İçeriği Hover Efekti */
+
 .product-table tbody tr {
   transition: all 0.3s ease;
 }
@@ -56,7 +56,7 @@
   transform: scale(1.02);
 }
 
-/* ✅ Buton Stili */
+
 .product-btn {
   padding: 8px 14px;
   border: none;
@@ -84,7 +84,7 @@
   background-color: #c82333;
 }
 
-/* ✅ Mobil Uyumlu Tasarım */
+
 @media (max-width: 768px) {
   .product-list {
       width: 100%;
