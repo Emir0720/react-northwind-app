@@ -9,14 +9,17 @@ const CartSummary = ({ cart, removeFromCart }) => {
         <ul className="cart-summary-list">
           {cart.map((item, index) => (
             <li key={index}>
-              {item.product.productName}  
-              <span className="quantity-badge">{item.quantity}</span>
-              {/* Add Remove button */}
-              <button 
-                className="remove-button" 
-                onClick={() => removeFromCart(item.product)}>
-                X
-              </button>
+              {item.product.productName}
+              <div className="item-container">
+                <span className="quantity-badge">{item.quantity}</span>
+      
+      
+                <button 
+                  className="remove-button" 
+                  onClick={() => removeFromCart(item.product)}>
+                  X
+                </button>
+              </div>
             </li>
           ))}
         </ul>

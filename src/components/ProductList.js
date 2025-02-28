@@ -8,33 +8,18 @@ const ProductList = ({ products, info, currentCategory, addToCart }) => {
         {info.title} - {currentCategory}
       </h2>
 
-      <table className="product-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Product Name</th>
-            <th>Unit Price</th>
-            <th>Quantity Per Unit</th>
-            <th>Units In Stock</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {products.map((product) => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.productName}</td>
-              <td>${product.unitPrice}</td>
-              <td>{product.quantityPerUnit}</td>
-              <td>{product.unitsInStock}</td>
-              <td>
-                <button onClick={() => addToCart(product)}>Add to Cart 🛒</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="product-grid">
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            <h3>{product.productName}</h3>
+            <p className="price">${product.unitPrice}</p>
+            <p className="stock">Stock: {product.unitsInStock}</p>
+            <button className="add-to-cart" onClick={() => addToCart(product)}>
+              Add to Cart 🛒
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

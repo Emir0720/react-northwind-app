@@ -3,10 +3,10 @@
   top: 80px; 
   right: 20px; 
   background-color: #007BFF;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #4f4e4e;
   width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   z-index: 1000; 
   display: none; 
   max-height: 250px;
@@ -15,7 +15,13 @@
 
 .cart-summary.open {
   display: block; 
+  animation: fadeIn 0.3s ease-in-out;
 }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 .cart-summary-list {
   list-style-type: none;
@@ -24,13 +30,14 @@
 }
 
 .cart-summary-list li {
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid #000000; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #2f2fd4;
   font-size: 18px;
+  transition: all 0.2s ease-in-out;
 
   
 }
@@ -41,31 +48,42 @@
 
 .cart-summary-list li:hover {
   background-color: #4997e5;
+  transform: scale(1.02);
 }
 
 .quantity-badge {
   background-color: #08e06a;
   color: #000;
   border-radius: 50%;
-  padding: 5px 10px;
+  padding: 6px 10px;
   font-size: 14px;
   margin-left: 10px;
-  font-weight: bold;
+  font-weight: medium;
+   
+}
+
+.item-container {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
 .remove-button {
   background-color: #ff4d4d;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 6px 12px;
   margin-left: 10px;
   cursor: pointer;
   font-size: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  
 }
 
 .remove-button:hover {
   background-color: #e60000;
 }
+
 
 
