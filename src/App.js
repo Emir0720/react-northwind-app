@@ -13,6 +13,13 @@ export default class App extends Component {
 
   componentDidMount() {
     this.getProducts();
+    this.loadCartFromStorage();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.cart !== this.state.cart) {
+      this.saveCartToStorage();
+    }
   }
 
   changeCategory = (category) => {
@@ -32,13 +39,11 @@ export default class App extends Component {
       .then((data) => this.setState({ products: data }));
   };
 
-  //  Sepete ürün ekleme fonksiyonu
+ 
   addToCart = (product) => {
-    let newCart = [...this.state.cart]; // Yeni bir dizi oluşturduk
+    let newCart = [...this.state.cart];
 
-    // Eğer ürün sepette varsa miktarı artır
     let addedItem = newCart.find((c) => c.product.id === product.id);
-
     if (addedItem) {
       addedItem.quantity += 1;
     } else {
@@ -46,16 +51,13 @@ export default class App extends Component {
     }
 
     this.setState({ cart: newCart });
-
     alertify.success(product.productName + " added to cart!", 3);
   };
 
   removeFromCart = (product) => {
     let newCart = [...this.state.cart];
 
-    // Sepetteki ürünün miktarını 1 azaltıyoruz
     let itemIndex = newCart.findIndex((c) => c.product.id === product.id);
-
     if (itemIndex !== -1) {
       if (newCart[itemIndex].quantity > 1) {
         newCart[itemIndex].quantity -= 1;
@@ -64,12 +66,25 @@ export default class App extends Component {
       }
     }
 
-    this.setState({ cart: newCart });  // Sepeti güncelliyoruz
+    this.setState({ cart: newCart });
+  };
+
+ 
+  saveCartToStorage = () => {
+    localStorage.setItem("cart", JSON.stringify(this.state.cart));
+  };
+
+ 
+  loadCartFromStorage = () => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      this.setState({ cart: JSON.parse(storedCart) });
+    }
   };
 
   render() {
-    let productInfo = { title: "Product List" };
-    let categoryInfo = { title: "Category List" };
+    let productInfo = { title: "PRODUCTS" };
+    let categoryInfo = { title: "CATEGORY" };
 
     return (
       <div>
@@ -81,9 +96,7 @@ export default class App extends Component {
             info={categoryInfo}
           />
 
-          
           <Routes>
-            {/* Products list route */}
             <Route 
               path="/" 
               element={
@@ -95,17 +108,12 @@ export default class App extends Component {
                 />
               }
             />
-
-            {/* Cart route */}
             <Route 
               path="/cart" 
-              element={<CartList />} 
+              element={<CartList cart={this.state.cart} removeFromCart={this.removeFromCart} />} 
             />
-
-            {/* Not Found route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-
         </div>
       </div>
     );

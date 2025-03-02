@@ -12,13 +12,23 @@
   transition: all 0.3s ease;
 }
 
-
-
 .navi h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
   font-family: 'Arial', sans-serif; 
   text-transform: uppercase; 
+  cursor: pointer; 
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navi h1:hover {
+  color: #ffcc00; 
+  transform: scale(1.05);
+}
+
+.navi h1:active {
+  color: #ff9900; 
+  transform: scale(0.95); 
 }
 
 .cart {

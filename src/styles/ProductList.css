@@ -11,9 +11,11 @@
 .product-list h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #222;
+  color: #333;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* 🛒 Ürünleri kart şeklinde göstermek için grid layout */
@@ -27,7 +29,7 @@
 
 /* 📦 Ürün Kartı */
 .product-card {
-  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -59,10 +61,16 @@
   font-weight: bold;
 }
 
+.quantity-per-unit {
+  font-size: 14px;
+  color: #0e0d0d;
+  font-weight: normal;
+}
+
 /* 📦 Stok Durumu */
 .stock {
   font-size: 14px;
-  color: #666;
+  color: #272626;
 }
 
 /* 🛍 Sepete Ekle Butonu */

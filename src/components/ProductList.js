@@ -12,7 +12,8 @@ const ProductList = ({ products, info, currentCategory, addToCart }) => {
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <h3>{product.productName}</h3>
-            <p className="price">${product.unitPrice}</p>
+            <p className="price">Price: ${product.unitPrice}</p>
+            <p className="quantity-per-unit">Quantity per Unit: {product.quantityPerUnit}</p>
             <p className="stock">Stock: {product.unitsInStock}</p>
             <button className="add-to-cart" onClick={() => addToCart(product)}>
               Add to Cart 🛒
