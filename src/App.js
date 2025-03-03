@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import CartList from "./components/CartList";
 
+
 export default class App extends Component {
   state = { currentCategory: "", products: [], cart: [] };
 
@@ -39,7 +40,6 @@ export default class App extends Component {
       .then((data) => this.setState({ products: data }));
   };
 
- 
   addToCart = (product) => {
     let newCart = [...this.state.cart];
 
@@ -69,12 +69,10 @@ export default class App extends Component {
     this.setState({ cart: newCart });
   };
 
- 
   saveCartToStorage = () => {
     localStorage.setItem("cart", JSON.stringify(this.state.cart));
   };
 
- 
   loadCartFromStorage = () => {
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
